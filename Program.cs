@@ -1,9 +1,21 @@
-﻿using System;
+﻿using NEventStore;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-class Program
+namespace EventSourceSample
 {
-    static void Main(string[] args)
+    class Program
     {
-        Console.WriteLine("Hello World!");
+        static void Main(string[] args)
+        {
+            Wireup.Init()
+                .LogToConsoleWindow()
+                .UsingSqlPersistence("EventStore")
+                .WithDialect(new MsSqlDialect)
+
+        }
     }
 }
