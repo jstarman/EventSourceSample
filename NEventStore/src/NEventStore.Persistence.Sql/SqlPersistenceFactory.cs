@@ -78,32 +78,6 @@ namespace NEventStore.Persistence.Sql
         protected static ISqlDialect ResolveDialect(ConnectionStringSettings settings)
         {
             string providerName = settings.ProviderName.ToUpperInvariant();
-
-            if (providerName.Contains("MYSQL"))
-            {
-                return new MySqlDialect();
-            }
-
-            if (providerName.Contains("SQLITE"))
-            {
-                return new SqliteDialect();
-            }
-
-            if (providerName.Contains("POSTGRES") || providerName.Contains("NPGSQL"))
-            {
-                return new PostgreSqlDialect();
-            }
-
-            if (providerName.Contains("ORACLE") && providerName.Contains("DATAACCESS"))
-            {
-                return new OracleNativeDialect();
-            }
-
-            if (providerName == "SYSTEM.DATA.ORACLECLIENT")
-            {
-                return new OracleNativeDialect();
-            }
-
             return new MsSqlDialect();
         }
     }

@@ -72,33 +72,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>MsSqlStatements.resx</DependentUpon>
     </Compile>
-    <Compile Include="SqlDialects\MySqlDialect.cs" />
-    <Compile Include="SqlDialects\MySqlStatements.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>MySqlStatements.resx</DependentUpon>
-    </Compile>
     <Compile Include="SqlDialects\NextPageDelegate.cs" />
-    <Compile Include="SqlDialects\OracleDbStatement.cs" />
-    <Compile Include="SqlDialects\OracleNativeDialect.cs" />
-    <Compile Include="SqlDialects\OracleNativeStatements.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>OracleNativeStatements.resx</DependentUpon>
-    </Compile>
     <Compile Include="SqlDialects\PagedEnumerationCollection.cs" />
-    <Compile Include="SqlDialects\PostgreSqlDialect.cs" />
-    <Compile Include="SqlDialects\PostgreSqlStatements.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>PostgreSqlStatements.resx</DependentUpon>
-    </Compile>
-    <Compile Include="SqlDialects\SqliteDialect.cs" />
-    <Compile Include="SqlDialects\SqliteStatements.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>SqliteStatements.resx</DependentUpon>
-    </Compile>
     <Compile Include="SqlPersistenceEngine.cs" />
     <Compile Include="SqlPersistenceFactory.cs" />
     <Compile Include="SqlPersistenceWireup.cs" />
@@ -132,22 +107,6 @@
     <EmbeddedResource Include="SqlDialects\MsSqlStatements.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>MsSqlStatements.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SqlDialects\MySqlStatements.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>MySqlStatements.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SqlDialects\OracleNativeStatements.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>OracleNativeStatements.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SqlDialects\PostgreSqlStatements.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>PostgreSqlStatements.Designer.cs</LastGenOutput>
-    </EmbeddedResource>
-    <EmbeddedResource Include="SqlDialects\SqliteStatements.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
-      <LastGenOutput>SqliteStatements.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

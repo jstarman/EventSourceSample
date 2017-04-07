@@ -10,11 +10,6 @@ namespace NEventStore.Example
     {
         private static readonly Guid StreamId = Guid.NewGuid(); // aggregate identifier
 
-        private static readonly byte[] EncryptionKey = new byte[]
-            {
-                0x0, 0x1, 0x2, 0x3, 0x4, 0x5, 0x6, 0x7, 0x8, 0x9, 0xa, 0xb, 0xc, 0xd, 0xe, 0xf
-            };
-
         private static IStoreEvents store;
 
         private static void Main()
@@ -36,8 +31,6 @@ namespace NEventStore.Example
         private static IStoreEvents WireupEventStore()
         {
             return Wireup.Init()
-                         .LogToOutputWindow()
-                         .UsingInMemoryPersistence()
                          .UsingSqlPersistence("EventStore") // Connection string is in app.config
                          .WithDialect(new MsSqlDialect())
                          .InitializeStorageEngine()
@@ -56,7 +49,6 @@ namespace NEventStore.Example
             using (IEventStream stream = store.OpenStream(StreamId, 0, int.MaxValue))
             {
                 var @event = new SomeDomainEvent {Value = "Initial event."};
-
                 stream.Add(new EventMessage {Body = @event});
                 stream.CommitChanges(Guid.NewGuid());
             }

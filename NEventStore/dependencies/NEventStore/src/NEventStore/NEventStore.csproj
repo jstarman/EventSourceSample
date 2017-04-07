@@ -159,7 +159,6 @@
     <Compile Include="Serialization\SerializationExtensions.cs" />
     <Compile Include="Persistence\StreamHead.cs" />
     <Compile Include="Snapshot.cs" />
-    <Compile Include="DispatcherWireupExtensions.cs" />
     <Compile Include="SynchronousDispatchSchedulerWireup.cs" />
     <Compile Include="SystemTime.cs" />
     <Compile Include="Wireup.cs" />
