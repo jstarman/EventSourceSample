@@ -22,19 +22,6 @@ namespace NEventStore.Example
 
         public void PostCommit(ICommit committed)
         {
-
-            // This is where we'd hook into our messaging infrastructure, such as NServiceBus,
-            // MassTransit, WCF, or some other communications infrastructure.
-            // This can be a class as well--just implement IDispatchCommits.
-            try
-            {
-                foreach (EventMessage @event in committed.Events)
-                    Console.WriteLine(Resources.MessagesDispatched + ((SomeDomainEvent)@event.Body).Value);
-            }
-            catch (Exception)
-            {
-                Console.WriteLine(Resources.UnableToDispatch);
-            }
         }
 
         public void OnPurge(string bucketId)
